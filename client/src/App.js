@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    const fecthposts = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch('/api/v1/posts')
+      } catch (error) {
+        
+      }
+    }
+  })
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +26,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          HelloWorld
         </a>
       </header>
     </div>
