@@ -90,12 +90,12 @@ export default function Results() {
   const [transactions, setTransactions] = useState([]);
 
   // DATA FOR DONUT CHART
-  // const [chartData, setChartData] = useState([]);
+  const [svg, setSvg] = useState([]);
 
   useEffect(() => {
     (async () => {
       await getTransactions();
-      await setChartData();
+      await setSvg();
     })();
 },[]);
   
@@ -128,6 +128,12 @@ export default function Results() {
               setChartData(data);
               console.log(chartData);
               */
+
+              let chart = ChartComponent(response.data);
+              console.log(chart);
+              setSvg(chart);
+              console.log(svg);
+
           })
           .catch((error) => {
             console.error(error);
@@ -144,7 +150,6 @@ export default function Results() {
   //getTransactions();
   
   return (
-  
     <div className='Results' >
         <div id="hell">
         <h2>Enjoy your time in Hell!</h2>
@@ -159,7 +164,7 @@ export default function Results() {
         </p>
         <p>
           <div className="chart">
-            <ChartComponent data={transactions} />
+            {svg}
           </div>
         </p>
         <h3>
