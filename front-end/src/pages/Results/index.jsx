@@ -90,7 +90,7 @@ export default function Results() {
   const [transactions, setTransactions] = useState([]);
 
   // DATA FOR DONUT CHART
-  // const [chartData, setChartData] = useState([]);
+  const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -108,6 +108,7 @@ export default function Results() {
               console.log('response:' + JSON.stringify(response.data));
               //type error
               setTransactions(response.data);
+              setChartData(ChartComponent(response.data));
               //let transactions = response.data;
               console.log(transactions);
               //return transactions;
@@ -159,7 +160,7 @@ export default function Results() {
         </p>
         <p>
           <div className="chart">
-            <ChartComponent data={transactions} />
+            {chartData}
           </div>
         </p>
         <h3>
