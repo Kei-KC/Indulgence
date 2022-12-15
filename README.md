@@ -48,11 +48,12 @@ Indulgences' sin-sort system is inspired by Dante's Inferno.
 * JavaScript
 * express
 * JSON
-* d3.js (graphics)
+* react-minimal-pie-chart (graphics)
 * nodeJS
 * Plaid API
 * Heroku CLI
 * React
+* MongoDB Atlas
 
 <!-- CONFLUENCE WIKI --> 
 ### Confluence Wiki 
