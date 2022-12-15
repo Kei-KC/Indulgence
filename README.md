@@ -64,6 +64,8 @@ The confluence wiki documentation for this project can be found <a href="https:/
 
 <!-- GETTING STARTED --> 
 ## Getting Started
+Check out the deployed version on Heroku!
+[http://indulgence.herokuapp.com/]
 
 ### Prerequisites
 
